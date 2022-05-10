@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Strona Główna</title>
+    <style>
+        h1, h2 {
+            color: #78f687;
+            background-color: #184214;
+            text-align: center;
+        }
+    </style>
+    <link href="Układ strony.css" rel="stylesheet" type="text/css" />
+    <link href="menu.css" rel="stylesheet" />
+    <script>
+        function suma(x, y) {
+            let w = Number(x) + Number(y);
+            alert(w);
+        }
+        function potega_razy_2(x, y) {
+            return 2 * Math.pow(x, y);
+        }
+    </script>
+</head> 
+<body>
+    <header> 
+    <h1 style="color:darkslategrey; background-color:darkseagreen">Strona o HTML </h1></header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="http://www.put.poznan.pl"target="_blank">
+                link do strony zewnętrznej</a></li>
+            <li><a href="artykul.html">Artykuł</a></li>
+            <li><a href="tabelka.html">Tabelka Pracownicy</a></li>
+            <li><a href="formularz.html">Formularz</a></li>
+            <li><a href="">JavaScript I</a></li>
+            <li><a href="">JavaScript II</a></li>
+            <li><a href="">Tablica JS</a></li>
+            <li><a href="">Canvas I</a></li>
+            <li><a href="">Canvas II</a></li>
+
+        </ul>
+    </nav>
+    <article>
+        
+        <script>
+            let zm = "Ala ma kota i";
+            alert(zm.length);
+
+            //document.write(zm.charAt(zm.length - 1) + "<br>");
+
+            for (var i = 0; i < zm.length; i++) {
+                document.write(zm.charAt(i) + "<br>");
+                for (var j = 0; j <= i; i++) {
+                    document.write("&nbsp;&nbsp");
+                }
+            }
+        documenr.write("<br>" + zm.toUpperCase() + "<br>");
+            document.write(zm / toLowercase() + "<br>");
+
+            document.write(zm.substring(0, 3) + "<br>");
+            documemt.write(zm.substring(3) + "<br>");
+
+            suma(2, 6);
+            document.write(potega_razy_2(2, 3));
+        </script>
+
+    </article>
+    <aside><iframe></iframe></aside>
+    <footer>to jest stopka całej strony HTML</footer>
+</body>
+</html>

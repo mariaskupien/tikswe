@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Strona Główna</title>
+    <style>
+        h1, h2 {
+            color: #78f687;
+            background-color: #184214;
+            text-align: center;
+        }
+    </style>
+    <link href="Układ strony.css" rel="stylesheet" type"text /css" />
+    <link href="menu.css" rel="stylesheet" />
+</head> 
+<body>
+    <header> 
+    <h1 style="color:darkslategrey; background-color:darkseagreen">Strona o HTML </h1></header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="http://www.put.poznan.pl"target="_blank">
+                link do strony zewnętrznej</a></li>
+            <li><a href="artykul.html">Artykuł</a></li>
+            <li><a href="tabelka.html">Tabelka Pracownicy</a></li>
+            <li><a href="formularz.html">Formularz</a></li>
+            <li><a href="">JavaScript I</a></li>
+            <li><a href="">JavaScript II</a></li>
+            <li><a href="">Tablica JS</a></li>
+            <li><a href="">Canvas I</a></li>
+            <li><a href="">Canvas II</a></li>
+
+        </ul>
+    </nav>
+    <article>
+       <script>
+           alert("Hello word");
+           document.write("abc");
+
+           var a = "abc";
+           document.write("<br>" + a + "jest typu:" + typeof (a) + "<br>");
+           b = 39;
+           document.write("<br>" + b + "jest typu:" + typeof (b) + "<br>");
+           let zm = 5;
+           const stala = 3;
+
+           document.write(a + b + zm + "xyz" + "<br>");
+           alert(a);
+
+           var txt = prompt("podaj swoje imię:", "tutaj :)");
+           document.write("witaj <b>" + txt + "</b> na stronie html");
+           if (txt == "Jula") {
+               alert("OK")
+           }
+           else {
+               alert("błąd");
+           }
+           for (var i = 0; i < 10; i++) {
+               document.write("<br>linia nr:" + i + "<br>");
+           }     
+           //alert("wartość zm i" + i);
+
+           const tab = [1,2,3,4];
+           const tab1 = new Array(1, 2, 3, 4);
+
+           tab[1] = 30;
+           
+       </script>
+    </article>
+    <aside><iframe></iframe></aside>
+    <footer>to jest stopka całej strony HTML</footer>
+</body>
+</html>

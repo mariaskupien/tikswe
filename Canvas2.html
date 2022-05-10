@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Strona Główna</title>
+    <style>
+        h1, h2 {
+            color: #78f687;
+            background-color: #184214;
+            text-align: center;
+        }
+    </style>
+    <link href="Układ strony.css" rel="stylesheet" type"text /css" />
+    <link href="menu.css" rel="stylesheet" />
+    <style>
+        canvas{
+            background-color: white;
+            border: 1px dashed red;
+        }
+    </style>
+    <script>
+        var can2, cont2, can1, cont1;
+        window.onload = function(){
+            can2 = document.getElementById("plotno2");
+            this.cont2 = this.can2.getContext("2d");
+
+             can1 = document.getElementById("plotno1");
+             cont1 = can1.getContext("2d");
+
+            //cont1.rect(0, 0, 30, 30);
+           // cont1.rect(50, 50, 30, 30);
+            //cont1.rect(100, 100, 30, 30);
+
+            cont1.rect(0, 0, 30, 30);
+            cont1.translate(50, 50);
+            cont1.rect(0, 0, 30, 30);
+            this.cont1.translate(50, 50);
+            
+            this.cont1.scale(0.5, 1);
+            cont1.rect(0, 0, 30, 30);
+             this.cont1.scale(2, 1);
+            cont1.translate(50, 50);
+            cont1.rect(0, 0, 30, 30);
+
+            cont1.stroke();
+            //docanvas2
+            this.cont2.translate(this.can2.width / 2, this.can2.height / 2);
+        }
+        function rysuj(liczba) {
+            cont2.beginPath();
+
+            let kat0 = (liczba > 1) ? 2 * Math.PI / liczba : 0;
+            cont2.rect(0, 0, 60, 60);
+
+            for (var i = 0; i < liczba; i++) {
+                cont2.rotate(kat0);
+                cont2.rect(0, 0, 60, 60);
+
+            }
+
+            cont2.stroke();
+        }
+
+          
+        function czysc() {
+            cont1.clearRect(-100, -100, can1.width, can1.height);
+            cont2.clearRect(-250, -250, can2.width, can2.height);
+        }
+        
+
+    </script>
+</head> 
+<body>
+    <header> 
+    <h1 style="color:darkslategrey; background-color:darkseagreen">Strona o HTML </h1></header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="http://www.put.poznan.pl"target="_blank">
+                link do strony zewnętrznej</a></li>
+            <li><a href="artykul.html">Artykuł</a></li>
+            <li><a href="tabelka.html">Tabelka Pracownicy</a></li>
+            <li><a href="formularz.html">Formularz</a></li>
+            <li><a href="">JavaScript I</a></li>
+            <li><a href="">JavaScript II</a></li>
+            <li><a href="">Tablica JS</a></li>
+            <li><a href="">Canvas I</a></li>
+            <li><a href="">Canvas II</a></li>
+
+        </ul>
+    </nav>
+    <article>
+        <h2>Canvas</h2>
+        <canvas id="plotno1" width="500" height="300"></canvas>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <input type="button" id="rysowanie" onclick="rysuj(ile.value)" value="Rysuj"/>
+        <input type="number" value="10" id="ile"/>
+        <input type="button" id="czysc" onclick="czysc()" value="czysc" />
+
+        <canvas id="plotno2" width="500" height="500"></canvas>
+    </article>
+    <aside><iframe src="kontrolki-js.html"></iframe></aside>
+    <footer>to jest stopka całej strony HTML</footer>
+</body>
+</html>

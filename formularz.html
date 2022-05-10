@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Strona Główna</title>
+    <style>
+        h1,h2{
+            color:#78f687;
+            background-color:#184214;
+            text-align:center;
+        }
+       
+        
+    </style>
+    <link href="Układ strony.css" rel="stylesheet" type"text/css" />
+    <link href="formularz.css" rel="stylesheet"/>
+    <link href="menu.css" rel="stylesheet"/>
+</head> 
+<body>
+    <header> 
+    <h1 style="color:darkslategrey; background-color:darkseagreen">Strona o HTML </h1></header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="http://www.put.poznan.pl"target="_blank">
+                link do strony zewnętrznej</a></li>
+            <li><a href="">Artykuł</a></li>
+            <li><a href="">Tabelka Pracownicy</a></li>
+            <li><a href="">Formularz</a></li>
+            <li><a href="">JavaScript I</a></li>
+            <li><a href="">JavaScript II</a></li>
+            <li><a href="">Tablica JS</a></li>
+            <li><a href="">Canvas I</a></li>
+            <li><a href="">Canvas II</a></li>
+
+        </ul>
+    </nav>
+    <article>
+        <h2>Formularz danych osobowych klienta</h2>
+        
+        <form action="mailto:maria.skupien@student.put.poznan.pl"
+              method="post">
+            <p>Pola oznaczone <em>*</em> są wymagane</p>
+
+            <fieldset>
+                <legend> Dane kontaktowe</legend>
+            <label for="imie"> Imię<em>*</em>:</label>
+            <input type="text" name="imie" id="imie"
+                   placeholder="Jan" required /> <br />
+
+            <label for="nazw">Nazwisko<em>*</em>:</label>
+            <input type="text" name="nazw" id="nazw" required /> <br />
+
+            <label for=" tel"> Numer Telefonu<em>*</em></label>
+            <input type="number" name="tel" id="tel"
+                   placeholder="789034567" required /> <br />
+
+            <label for="email"> E-Mail<em>*</em></label>
+            <input type="email" name="email" id="email" 
+                   placeholder="jan.kowalski@gmail.com" required /> <br />
+            </fieldset>
+            <fieldset>
+                <legend>Zainteresowania</legend>
+                <label><input type="checkbox" name="Energetyka" /> Energetyka </label> <br />
+                <input type="checkbox" name="Elektrotechnika" id="Elektrotechnika" />
+                <label for="Elektrotechnika"> Elektrotechnika</label> <br />
+                <label><input type="checkbox" name="Sport" /> Sport </label> <br />
+                <label><input type="checkbox" name="Motoryzacja" /> Motoryzacja </label> <br />
+                <label><input type="checkbox" name="Taniec" /> Taniec </label> <br />
+            </fieldset>
+            <fieldset>
+                <legend>Przedział wiekowy</legend>
+                <input type="radio" name="wiek" id="wiek" value="0-18" /> 0-18 <br />
+                <input type="radio" name="wiek" id="wiek" value="19-40" /> 19-40 <br />
+                <input type="radio" name="wiek" id="wiek" value="41-65" /> 41-65 <br />
+                <input type="radio" name="wiek" id="wiek" value="więcej" /> więcej <br />
+            </fieldset>
+            <fieldset>
+                <legend>Wybierz przeglądarkę</legend>
+                <input type="text" name="przegladarka" list="przeglądarka"/>
+                <datalist id="przegladarka">
+                    <option value="Chrome">Chrome</option>
+                    <option value="Firefox">Firefox</option>
+                    <option value="Edge">Edge</option>
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>Pliki i opinia </legend>
+                <label for="file">Prześlij pliki</label>
+                <input type="file" id="file" /> <br/>
+                
+                <label for="">Opinia</label> <br/>
+                <textarea cols="40" rows="10" placeholder="wpisz swoją opinie"></textarea>
+            </fieldset>
+            <p>
+                <input type="submit" value="Wyślij formularz"/>
+                <input type="reset" value="Kasuj formularz"/>
+            </p>
+        </form>
+    </article>
+    <aside><iframe></iframe></aside>
+    <footer>to jest stopka całej strony HTML</footer>
+</body>
+</html>

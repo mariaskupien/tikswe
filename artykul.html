@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Strona Główna</title>
+    <link href="Układ strony.css" rel="stylesheet" type"text /css" />
+    <link href="menu.css" rel="stylesheet" />
+</head> 
+<body>
+    <header> <h1>Strona o HTML </h1></header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="http://www.put.poznan.pl"target="_blank">
+                link do strony zewnętrznej</a></li>
+            <li><a href="">Artykuł</a></li>
+            <li><a href="">Tabelka Pracownicy</a></li>
+            <li><a href="">Formularz</a></li>
+            <li><a href="">JavaScript I</a></li>
+            <li><a href="">JavaScript II</a></li>
+            <li><a href="">Tablica JS</a></li>
+            <li><a href="">Canvas I</a></li>
+            <li><a href="">Canvas II</a></li>
+
+        </ul>
+    </nav>
+    <article>
+        <section>
+
+            <header>
+                <h2>Marginesy w CSS </h2>
+                <h3>Wprowadzdzenie</h3>
+            </header>
+            <p>
+                Każdy element generuje w dokumencie prostokątny obszar zwany pudełkiem (ang. Box model). Pudełko składa się z:
+            </p>
+            <ol>
+                <li> Zawartości - "Content" (np. test, obrazek itd.)
+                <li> Otaczających marginesów wewnętrznych - "Padding"
+                <li> Obramowania - "Border"
+                <li> Marginesów - "Margin"
+            </ol>
+            <p>
+                Ostatnie trzy składniki są opcjonalne, tzn. mogą mieć wartość zero. Obwód (zewnętrzny) każdego z czterech obszarów nazywamy krawędzią ("Edge"). Według CSS rozmiary elementu (własności width oraz height) odnoszą się do samej zawartości ("Content") i nie wpływają na pozostałe obszary modelu pudełkowego ("Box model"), które są tworzone na zewnątrz zawartości, ale wewnątrz pudełka. Natomiast tło elementu jest określone dla wszystkich z podanych powyżej obszarów z wyjątkiem marginesów zewnętrznych, które zawsze są przez roczyste ("Transparent"). Zapamiętanie tych krótkich zasad pozwoli Ci uniknąć w przyszłości nieoczeki wanych problemów z wyświetlaniem elementów strony. Na <a href="#idFigure">rys.1<a /> znajdziesz graficzną interpretację pudełkowej budowy elementów w CSS.
+            </p>
+            <figure id="idFigure">
+
+                <img src="rysunek1.png" alt="tu byłrysunek :P" title="CSS" />
+                <figcaption>
+                    Rysunek 1. Strukutra ramek i marginesów znacznika HTML wg. CSS.
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>
+                Przykład zastosowania wzoru w znacznku figure
+            </h2>
+            <p>
+                Postać czasowa sygnału okresowego zmiennego sinusoidalnie zgodnie z zależnością:
+            </p>
+            <figure>
+                x(t)=A<sub>m</sub><sup>1</sup>sin(2&pi;ft+&phi;<sub>0</sub>)
+                <figcaption>
+                    gdzie:
+                    t - czas,<br />
+                    A<sub>m</sub><sup>1</sup>- amplituda sygnału,<br />
+                    f - częstotliwość sygnału,<br />
+                   &phi;<sub>0</sub> - faza początkowa. <br />
+                </figcaption>
+            </figure>
+        </section>
+        <footer>
+            Autorzy artykułu:
+            <address>
+                Jan Kowalski
+                adres email: <a href="mailto:jan.kowalski@put.poznan.pl">
+    jan.kowalski@put.poznan.pl</a> <br>
+    Henryk Nowak
+    adres email: <a href="mailto:henryk.nowak@put.poznan.pl">
+    henryk.nowak@put.poznan.pl
+</a> <br />
+    Źródło strony: wikipedia.pl
+</address>
+        </footer>
+
+
+    </article>
+    <aside><iframe></iframe></aside>
+    <footer>to jest stopka całej strony HTML</footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿form {
+    width:500px;
+}
+label{
+    width:150px;
+    display:inline-block;
+    border: 1px solid#850c86;
+    padding:5px;
+    margin:2px;
+    font:bold 16px Arial;
+    background-color:#aa6ffe;
+}
+input{
+    font-family: "Comic Sans MS";
+    font-size: 18px;
+}
+input:focus{
+    background-color:#ab8ff3;
+}
+fieldset{
+    border: 3px dotted #f52cea;
+    border-radius:15px;
+}
+em{
+    color:red;
+    front-weight:bold;
+}
+legend{
+    font-family:Haettenschweiler;
+    font-size: 20px;
+}

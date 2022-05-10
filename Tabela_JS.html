@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Tabela JavaScript</title>
+    <style>
+        h1, h2 {
+            color: #78f687;
+            background-color: #184214;
+            text-align: center;
+        }
+    </style>
+    <link href="Układ strony.css" rel="stylesheet" type"text /css" />
+    <link href="menu.css" rel="stylesheet" />
+    <script src="Tabelka_JS.js"></script>
+</head> 
+<body>
+    <header> 
+    <h1 style="color:darkslategrey; background-color:darkseagreen">Strona o HTML </h1></header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="http://www.put.poznan.pl"target="_blank">
+                link do strony zewnętrznej</a></li>
+            <li><a href="artykul.html">Artykuł</a></li>
+            <li><a href="tabelka.html">Tabelka Pracownicy</a></li>
+            <li><a href="formularz.html">Formularz</a></li>
+            <li><a href="">JavaScript I</a></li>
+            <li><a href="">JavaScript II</a></li>
+            <li><a href="">Tablica JS</a></li>
+            <li><a href="">Canvas I</a></li>
+            <li><a href="">Canvas II</a></li>
+
+        </ul>
+    </nav>
+    <article>
+        <h2>Tabela wygenerowana z JavaScript</h2>
+        
+        <input type="button" value="Tabela pracowników"
+               onclick="wyswietlTabela(tab_prac)" />
+        <br/>
+        <table border="1" id="tabela"></table>
+
+    </article>
+    <aside><iframe src="kontrolki-js.html"></iframe></aside>
+    <footer>to jest stopka całej strony HTML</footer>
+</body>
+</html>

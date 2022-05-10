@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Strona Główna</title>
+    <style>
+        h1, h2 {
+            color: #78f687;
+            background-color: #184214;
+            text-align: center;
+        }
+    </style>
+    <link href="Układ strony.css" rel="stylesheet" type"text /css" />
+    <link href="menu.css" rel="stylesheet" />
+    <style>
+        canvas{
+            background-color: white;
+            border: 1px dashed red;
+        }
+    </style>
+    <script>
+        var can, cont;
+        window.onload = function(){
+            can = document.getElementById("plotno");
+        }
+
+        function rysujLinie() {
+            if (cont == null) {
+                cont=can.getContext("2d");
+            }
+            cont.beginPath(); 
+            cont.lineWidth = 3;
+            cont.strokeStyle = "pink";
+            cont.lineCap = "round"; //"square" "butt"
+            cont.moveTo(10, 10);
+            cont.lineTo(can.width - 10, can.height - 10);
+            cont.stroke();
+
+            cont.beginPath();
+            cont.moveTo(20, 10);
+            cont.strokeStyle = "#00ff00";
+            cont.lineWidth = 2;
+            cont.lineTo(can.width, can.height - 10);
+            cont.stroke();
+        }
+
+        function rysujKrzywa() {
+            if (cont == null) {
+                cont=can.getContext("2d");
+            }
+            let srodekX = 200;
+            let srodekY = 150;
+            let promien = 100;
+            let poczatekKat = 1.25 * Math.PI;
+            let koniecKat = 1.75 * Math.PI;
+
+            cont.strokeStyle = "purple";
+            cont.lineWidth = 5;
+            cont.beginPath();
+            cont.arc(srodekX, srodekY, promien, poczatekKat, koniecKat);
+            cont.stroke();
+
+            cont = can.getContext("2d");
+            cont.lineWidth = 6;
+            cont.strokeStyle = "#333";
+            cont.beginPath();
+            cont.moveTo(258, 248);
+            cont.bezierCurveTo(150, 100, 350, 100, 233, 188);
+cont.stroke();
+        }
+
+        function rysujFigury() {
+            if (cont == null) {
+                cont=can.getContext("2d");
+            }
+            var dlugoscRamion = 100;
+            var dlugoscPodstawy = 150;
+            var h = Math.sqrt(Math.pow(dlugoscRamion, 2) - Math.pow(dlugoscPodstawy / 2, 2));
+
+            cont.beginPath();
+            cont.moveTo(can.width / 2 - dlugoscPodstawy / 2, can.height / 2);
+            cont.lineTo(can.width / 2, can.height / 2 - h);
+            cont.lineTo(can.width / 2 + dlugoscPodstawy / 2, can.height / 2);
+            //1 sposob
+            //cont.lineTo(can.width / 2 - dlugoscPodstawy / 2, can.height / 2);
+            //2sposob
+            cont.closePath();
+            cont.fillStyle = "yellow";
+            cont.fill();
+            cont.lineWidth = 5;
+            cont.lineJoin = "round";
+            cont.strokeStyle = "#963";
+
+            cont.stroke();
+
+            //prostokat
+            cont.fillStyle = "rgba(200,2,10,0.5)";
+            cont.fillRect(160, 40, 90, 50);
+            cont.strokeStyle = "rgb(150,50,100)";
+            cont.strokeRect(160, 40, 90, 50);
+
+            //cont.globalAlpha = 1;
+                
+
+        }
+        function rysujTekst() {
+            if (cont == null) {
+                cont = can.getContext("2d");
+            }
+            cont.font = "20px Arial";
+            cont.textAlign = "left";
+            cont.fillText("Tekst wyrównany do lewej", can.width / 2, 50);
+            cont.textAlign = "center";
+            cont.lineWidth = 2;
+            cont.strokeText("Tekst wyrównany do środka", can.width / 2, 100);
+        }
+        function czysc() {
+            cont.clearRect(0, 0, can.width, can.height);
+        }
+
+    </script>
+</head> 
+<body>
+    <header> 
+    <h1 style="color:darkslategrey; background-color:darkseagreen">Strona o HTML </h1></header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="http://www.put.poznan.pl"target="_blank">
+                link do strony zewnętrznej</a></li>
+            <li><a href="artykul.html">Artykuł</a></li>
+            <li><a href="tabelka.html">Tabelka Pracownicy</a></li>
+            <li><a href="formularz.html">Formularz</a></li>
+            <li><a href="">JavaScript I</a></li>
+            <li><a href="">JavaScript II</a></li>
+            <li><a href="">Tablica JS</a></li>
+            <li><a href="">Canvas I</a></li>
+            <li><a href="">Canvas II</a></li>
+
+        </ul>
+    </nav>
+    <article>
+        <h2>Canvas</h2>
+        <input type="button" value="Rysuj linie" onclick="rysujLinie()" />
+        <input type="button" value="Rysuj krzywą" onclick="rysujKrzywa()" />
+        <input type="button" value="Rysuj figure" onclick="rysujFigury()" />
+        <input type="button" value="Rysuj tekst" onclick="rysujTekst()" />
+        <input type="button" value="Czyść wykres" onclick="czysc()" />
+        <br/>
+        <canvas id="plotno" width="500" height="300"></canvas>
+
+
+    </article>
+    <aside><iframe src="kontrolki-js.html"></iframe></aside>
+    <footer>to jest stopka całej strony HTML</footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Strona Główna</title>
+    <style>
+        h1, h2 {
+            color: #78f687;
+            background-color: #184214;
+            text-align: center;
+        }
+    </style>
+    <link href="Układ strony.css" rel="stylesheet" type"text /css" />
+    <link href="menu.css" rel="stylesheet" />
+    <style>
+        canvas{
+            background-color: white;
+            border: 1px dashed red;
+        }
+    </style>
+    <script>
+        var can, cont;
+        window.onload = function(){
+            can = document.getElementById("plotno");
+        }
+        function pacman() {
+
+        }
+        
+        function czysc() {
+            cont.clearRect(0, 0, can.width, can.height);
+        }
+
+    </script>
+</head> 
+<body>
+    <header> 
+    <h1 style="color:darkslategrey; background-color:darkseagreen">Strona o HTML </h1></header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="http://www.put.poznan.pl"target="_blank">
+                link do strony zewnętrznej</a></li>
+            <li><a href="artykul.html">Artykuł</a></li>
+            <li><a href="tabelka.html">Tabelka Pracownicy</a></li>
+            <li><a href="formularz.html">Formularz</a></li>
+            <li><a href="">JavaScript I</a></li>
+            <li><a href="">JavaScript II</a></li>
+            <li><a href="">Tablica JS</a></li>
+            <li><a href="">Canvas I</a></li>
+            <li><a href="">Canvas II</a></li>
+
+        </ul>
+    </nav>
+    <article>
+        <h2>Canvas</h2>
+        <input type="button" value="Rysuj Pacmana" onclick="" />
+       
+        <br/>
+        <canvas id="plotno" width="500" height="300"></canvas>
+
+
+    </article>
+    <aside><iframe src="kontrolki-js.html"></iframe></aside>
+    <footer>to jest stopka całej strony HTML</footer>
+</body>
+</html>

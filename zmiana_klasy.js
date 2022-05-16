@@ -11,7 +11,7 @@ var dziala = false;
 function ruchomy() {
     let element = document.getElementById('rTekst');
     napis = element.value;
-    napis.substring(1, napis.length) + napis.substring(0, 1);
+    element = napis.substring(1, napis.length) + napis.substring(0, 1);
     
     element.value = napis;
 
